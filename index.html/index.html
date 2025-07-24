@@ -1,37 +1,60 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>あなたのタイプ診断</title>
-    <link rel="stylesheet" href="style.css">
+<title>ダンジョン冒険</title>
+<link rel="stylesheet" href="style.css"> <style>
+  body {
+    /* background-image: url('your_image_url.jpg'); の代わりにこれを記述 */
+    background-image: url('images/shuppatsu.png'); /* あなたが画像を保存したパスとファイル名に置き換える */
+    background-size: contain; /* 画面に収まるように調整 */
+    background-repeat: no-repeat;
+    background-position: center; /* 画像を中央に配置 */
+    background-attachment: fixed; /* スクロールしても画像が固定される */
+    /* その他のbodyスタイル（flexboxなど）もここに記述 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh; /* 画面いっぱいに広がる */
+    margin: 0;
+    /* padding-top: 20%; これは画像の高さに合わせて調整 */
+  }
+
+  /* 既存の .option クラスのスタイルなど */
+  .option {
+    border: 2px solid white; /* 見やすいように枠線を追加 */
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.7); /* 黒っぽい半透明の背景 */
+    color: white; /* テキスト色を白に */
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.2em;
+    text-align: center;
+  }
+  .option:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+</style>
 </head>
 <body>
-    <div class="container">
-        <h1>あなたのタイプ診断</h1>
-        <div id="questions">
-            <div class="question-block" id="q1">
-                <p class="question-text">Q1. 週末の過ごし方で、一番惹かれるのはどれ？</p>
-                <label><input type="radio" name="q1" value="A"> 家でゆっくり過ごす</label><br>
-                <label><input type="radio" name="q1" value="B"> 友達とアクティブに出かける</label><br>
-                <label><input type="radio" name="q1" value="C"> 新しい場所を探検する</label><br>
-            </div>
 
-            <div class="question-block" id="q2" style="display:none;"> <p class="question-text">Q2. ストレスを感じた時、どうする？</p>
-                <label><input type="radio" name="q2" value="X"> 一人で考える時間をとる</label><br>
-                <label><input type="radio" name="q2" value="Y"> 誰かに話を聞いてもらう</label><br>
-                <label><input type="radio" name="q2" value="Z"> 気分転換に体を動かす</label><br>
-            </div>
-            <button id="nextBtn">次へ</button>
-            <button id="submitBtn" style="display:none;">診断する</button> </div>
+  <div class="option" onclick="handleOption('think')">💡何か面白いことを考える</div>
+  <div class="option" onclick="handleOption('walk')">👣とにかく歩き出す</div>
+  <div class="option" onclick="handleOption('map')">🗺️ 周辺の地図を確認する</div>
+  <div class="option" onclick="handleOption('flag')">🚩 理想の冒険を語る</div>
+  <div class="option" onclick="handleOption('talk')">💬 村人と話す</div>
 
-        <div id="result" class="result-block" style="display:none;">
-            <h2>診断結果</h2>
-            <p id="result-text"></p>
-            <button id="resetBtn">もう一度診断する</button>
-        </div>
-    </div>
+  <script>
+    function handleOption(choice) {
+      console.log('ユーザーが選択しました:', choice);
+      alert('あなたは「' + choice + '」を選びました。');
+      // ここに、選択肢に応じて次に何が起こるかのロジックを実装します
+      // 例: 別のHTMLページに遷移する
+      // if (choice === 'think') {
+      //   window.location.href = 'thinking_scene.html';
+      // }
+    }
+  </script>
 
-    <script src="script.js"></script>
 </body>
 </html>
