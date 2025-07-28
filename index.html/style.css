@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  font-family: sans-serif;
+  background:#000;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:50vh;
+}
+
+#app {
+  width:100%;
+  max-width:480px;
+  position:relative;
+}
+
+#start-screen,
+#quiz-screen,
+#result {
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+}
+
+#start-screen img,
+#quiz-screen .slide img,
+#result img {
+  width:100%;
+  display:block;
+}
+
+.btn,
+.next-btn,
+.back-btn,
+.home-btn,
+.retry-btn,
+.share-btn {
+  position:absolute;
+  font-family:'MedievalSharp', cursive;
+  color:#fff;
+  background:rgba(0,0,0,0.6);
+  border:2px solid #fff;
+  border-radius:6px;
+  cursor:pointer;
+  text-shadow:1px 1px 2px #000;
+  padding:0.6rem 1.2rem;
+}
+
+#start-btn {
+  bottom:2rem;
+  left:50%;
+  transform:translateX(-50%);
+  width:200px;
+  height:80px;
+  opacity:0;
+  z-index:2;
+  pointer-events:auto;
+}
+
+#quiz-screen {
+  display:none;
+}
+
+.slide {
+  position:relative;
+}
+
+.options {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:flex-end;
+  gap:0.5rem;
+  position:absolute;
+  bottom:2rem;
+  width:100%;
+}
+
+.options label {
+  width:80%;
+  max-width:300px;
+  display:flex;
+  justify-content:center;
+  font-family:'MedievalSharp', cursive;
+  font-size:0.9rem;
+  background:rgba(0,0,0,0.6);
+  color:#fff;
+  padding:0.45rem 0.8rem;
+  border:2px solid #fff;
+  border-radius:6px;
+  cursor:pointer;
+  text-shadow:1px 1px 2px #000;
+}
+
+.options input {
+  display:none;
+}
+
+.options input:checked + span {
+  background:rgba(255,255,255,0.8);
+  color:#000;
+  border-color:#ffd700;
+}
+
+.options span {
+  width:100%;
+  text-align:center;
+}
+
+.next-btn {
+  bottom:1rem;
+  right:1rem;
+  padding:0.5rem 1rem;
+}
+
+.next-btn:disabled {
+  background:rgba(128,128,128,0.6);
+  border-color:#888;
+  cursor:default;
+}
+
+.back-btn {
+  bottom:1rem;
+  left:1rem;
+  padding:0.5rem 1rem;
+}
+
+.retry-btn,
+.share-btn {
+  bottom:1rem;
+  left:10%;
+  padding:0.5rem 1rem;
+  margin-right: 1rem;
+}
+
+.share-btn {
+  left:55%;
+}
+
+#result {
+  display:none;
+  text-align:center;
+}
+
+#progress {
+  position:absolute;
+  top:0.5rem;
+  right:0.5rem;
+  color:white;
+  font-size:0.9rem;
+  text-shadow:1px 1px 2px #000;
+  font-family:'MedievalSharp', cursive;
+}
