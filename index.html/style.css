@@ -78,11 +78,12 @@ body {
   position:absolute;
   bottom:2rem;
   width:100%;
+  padding: 0 1rem;
 }
 
 .options label {
   width:80%;
-  max-width:300px;
+  max-width:90vw;
   display:flex;
   justify-content:center;
   font-family:'MedievalSharp', cursive;
