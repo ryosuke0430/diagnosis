@@ -67,6 +67,7 @@ body {
 
 .slide {
   position:relative;
+  padding-bottom: 8rem; 
 }
 
 .options {
@@ -75,8 +76,8 @@ body {
   align-items:center;
   justify-content:flex-end;
   gap:0.5rem;
-  position:absolute;
-  bottom:2rem;
+  position:relative;
+  margin-top: 1.5rem;
   width:100%;
   padding: 0 1rem;
 }
@@ -155,4 +156,22 @@ body {
   font-size:0.9rem;
   text-shadow:1px 1px 2px #000;
   font-family:'MedievalSharp', cursive;
+}
+@media screen and (max-width: 480px) {
+  .options label {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.6rem;
+  }
+
+  .btn,
+  .next-btn,
+  .back-btn,
+  .retry-btn,
+  .share-btn {
+    padding: 0.4rem 0.8rem;
+  }
+
+  #progress {
+    font-size: 0.8rem;
+  }
 }
