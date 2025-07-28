@@ -1,174 +1,127 @@
 @import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
 
-* { margin:0; padding:0; box-sizing:border-box; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
   font-family: sans-serif;
-  background:#000;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  min-height:50vh;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 #app {
-  width:100%;
-  max-width:480px;
-  position:relative;
-}
-
-#start-screen,
-#quiz-screen,
-#result {
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
+  width: 100%;
+  max-width: 480px;
+  position: relative;
 }
 
 #start-screen img,
 #quiz-screen .slide img,
 #result img {
-  width:100%;
-  display:block;
+  width: 100%;
+  display: block;
 }
 
-.btn,
-.next-btn,
-.back-btn,
-.home-btn,
-.retry-btn,
-.share-btn {
-  position:absolute;
-  font-family:'MedievalSharp', cursive;
-  color:#fff;
-  background:rgba(0,0,0,0.6);
-  border:2px solid #fff;
-  border-radius:6px;
-  cursor:pointer;
-  text-shadow:1px 1px 2px #000;
-  padding:0.6rem 1.2rem;
+.btn, .next-btn, .back-btn, .retry-btn, .share-btn {
+  font-family: 'MedievalSharp', cursive;
+  color: #fff;
+  background: rgba(0,0,0,0.6);
+  border: 2px solid #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  text-shadow: 1px 1px 2px #000;
+  padding: 0.6rem 1.2rem;
 }
 
 #start-btn {
-  bottom:2rem;
-  left:50%;
-  transform:translateX(-50%);
-  width:200px;
-  height:80px;
-  opacity:0;
-  z-index:2;
-  pointer-events:auto;
-}
-
-#quiz-screen {
-  display:none;
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 80px;
+  z-index: 2;
 }
 
 .slide {
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  padding-bottom: 6rem;
 }
 
-.slide img {
-  width: 90%;
-  height: auto;
-  margin-bottom: 1rem;
+.slide.active {
+  display: flex;
 }
 
 .options {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.75rem;
-  width: 90%;
-  max-width: 500px;
-  margin-bottom: 2rem;
+  margin-top: 1rem;
+  gap: 0.5rem;
+  padding: 0 1rem;
+  width: 100%;
 }
 
 .options label {
-  width: 100%;
-  display: block;
-  border: 2px solid white;
-  padding: 0.75rem;
-  border-radius: 8px;
-  color: white;
-  background: #000;
-  text-align: center;
-  font-size: 1rem;
+  width: 80%;
+  max-width: 90vw;
+  display: flex;
+  justify-content: center;
+  font-family: 'MedievalSharp', cursive;
+  font-size: 0.9rem;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  padding: 0.45rem 0.8rem;
+  border: 2px solid #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  text-shadow: 1px 1px 2px #000;
 }
 
 .options input {
-  display:none;
+  display: none;
 }
 
 .options input:checked + span {
-  background: #ffd700;
-  color: black;
-  font-weight: bold;
-}
-
-.options span {
-  display: block;
-  width: 100%;
-}
-.next-btn {
-  bottom:1rem;
-  right:1rem;
-  padding:0.5rem 1rem;
-}
-
-.next-btn:disabled {
-  background:rgba(128,128,128,0.6);
-  border-color:#888;
-  cursor:default;
-}
-
-.back-btn {
-  bottom:1rem;
-  left:1rem;
-  padding:0.5rem 1rem;
-}
-
-.retry-btn,
-.share-btn {
-  bottom:1rem;
-  left:10%;
-  padding:0.5rem 1rem;
-  margin-right: 1rem;
-}
-
-.share-btn {
-  left:55%;
-}
-
-#result {
-  display:none;
-  text-align:center;
+  background: rgba(255,255,255,0.8);
+  color: #000;
+  border-color: #ffd700;
 }
 
 #progress {
-  position:absolute;
-  top:0.5rem;
-  right:0.5rem;
-  color:white;
-  font-size:0.9rem;
-  text-shadow:1px 1px 2px #000;
-  font-family:'MedievalSharp', cursive;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  color: white;
+  font-size: 0.9rem;
+  text-shadow: 1px 1px 2px #000;
 }
+
+.nav-buttons {
+  position: absolute;
+  bottom: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+
+#result {
+  display: none;
+  text-align: center;
+}
+
 @media screen and (max-width: 480px) {
   .options label {
     font-size: 0.85rem;
-    padding: 0.5rem 0.1rem;
+    padding: 0.4rem 0.6rem;
   }
 
-  .btn,
-  .next-btn,
-  .back-btn,
-  .retry-btn,
-  .share-btn {
+  .btn, .next-btn, .back-btn, .retry-btn, .share-btn {
     padding: 0.4rem 0.8rem;
   }
 
