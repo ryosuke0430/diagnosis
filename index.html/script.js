@@ -18,9 +18,9 @@ const choices = [
 const types = ['creative','active','systematic','harmonizer','expressive'];
 const typeNames = {
   creative:'ひらめきクリエイター',
-  active:'突撃アクター',
-  systematic:'クールな仕組み屋',
-  harmonizer:'にこにこ調整さん',
+  active:'おせっかいヒーロー',
+  systematic:'仕掛けの賢者',
+  harmonizer:'つなぐ調和士',
   expressive:'言葉の冒険家',
   balance:'バランス型冒険者'
 };
