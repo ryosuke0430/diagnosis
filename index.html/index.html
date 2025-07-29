@@ -13,33 +13,9 @@
       <img src="images/sindan00.png" alt="スタート画面">
       <button id="start-btn" class="btn">診断スタート</button>
     </div>
-
-    <div id="quiz-screen">
-      <!-- 質問1〜10 -->
-      <div class="slide active" data-index="0">
-        <div id="progress">1 / 10</div>
-        <img src="images/sindan01.png" alt="質問1">
-        <div class="options">
-          <label><input type="radio" name="q0" value="creative"><span>面白い仕掛けを考える</span></label>
-          <label><input type="radio" name="q0" value="active"><span>とにかく歩き出す</span></label>
-          <label><input type="radio" name="q0" value="systematic"><span>周辺地図や環境を確認</span></label>
-          <label><input type="radio" name="q0" value="harmonizer"><span>村人と話して情報収集</span></label>
-          <label><input type="radio" name="q0" value="expressive"><span>この冒険の物語を記録しはじめる</span></label>
-        </div>
-      </div>
-
-      <!-- 質問2〜10：同じ形式で追加 -->
-      <!-- ... 省略（必要なら10問すべて展開） -->
-
-      <div class="nav-buttons">
-        <button class="back-btn">戻る</button>
-        <button class="next-btn" disabled>次へ</button>
-      </div>
-    </div>
-
+    <div id="quiz-screen"></div>
     <div id="result"></div>
   </div>
-
   <script src="script.js"></script>
 </body>
 </html>
