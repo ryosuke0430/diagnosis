@@ -84,7 +84,7 @@ body {
 
 .options {
   position: absolute;
-  top: 73%;                 /* 画像の上部から50%の位置に配置 */
+  top: 173%;                 /* 画像の上部から50%の位置に配置 */
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
