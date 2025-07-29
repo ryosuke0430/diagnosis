@@ -9,6 +9,7 @@ body {
   justify-content:center;
   align-items:center;
   min-height:50vh;
+
 }
 
 #app {
@@ -71,6 +72,7 @@ body {
   flex-direction: column;
   align-items: center;
   width: 100%;
+  padding-bottom: 4rem;  /* ← 下にも余裕を持たせる */
 }
 
 .slide img {
@@ -81,7 +83,7 @@ body {
 
 .options {
   position: absolute;
-  top: 78.8%;                 /* 画像の上部から50%の位置に配置 */
+  top: 72.5%;                 /* 画像の上部から50%の位置に配置 */
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
