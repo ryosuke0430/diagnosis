@@ -101,12 +101,12 @@ body {
   width: 100%;
   display: block;
   border: 2px solid white;
-  padding: 0.4rem;
+  padding: 0.1rem;
   border-radius: 8px;
   color: white;
   background: #000;
   text-align: center;
-  font-size: 0.6rem;
+  font-size: 0.8rem;
 }
 
 .options input {
