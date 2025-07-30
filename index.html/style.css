@@ -58,7 +58,6 @@ body {
   width:200px;
   height:80px;
   opacity:0;
-  z-index:2;
   pointer-events:auto;
 }
 
@@ -123,23 +122,7 @@ body {
   display: block;
   width: 100%;
 }
-.next-btn {
-  bottom:1rem;
-  right:1rem;
-  padding:0.5rem 1rem;
-}
 
-.next-btn:disabled {
-  background:rgba(128,128,128,0.6);
-  border-color:#888;
-  cursor:default;
-}
-
-.back-btn {
-  bottom:1rem;
-  left:1rem;
-  padding:0.5rem 1rem;
-}
 
 .retry-btn,
 .share-btn {

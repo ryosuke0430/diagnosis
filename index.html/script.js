@@ -17,14 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
         ["常にワクワクをつくれる人", "すぐ行動できる挑戦者", "課題を見つけて改善できる人", "信頼されるチームプレイヤー", "自分の言葉で道を切り拓く人"]
     ];
     const types = ['creative', 'active', 'systematic', 'harmonizer', 'expressive'];
-    const typeNames = {
-        creative: 'ひらめきクリエイター',
-        active: 'おせっかいヒーロー',
-        systematic: '仕掛けの賢者',
-        harmonizer: 'つなぐ調和士',
-        expressive: '言葉の冒険家',
-        balance: 'バランス型冒険者'
-    };
+    
+    
     const resultImages = {
         creative: 'images/type01.png',
         active: 'images/type02.png',
@@ -33,15 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         expressive: 'images/type05.png',
         balance: 'images/type00.png'
     };
-    const resultDescriptions = {
-        creative: 'あなたは常に新しいアイデアやユニークな発想で周りを驚かせます。人とは違う視点から物事を捉え、創造的な解決策を生み出す才能に溢れています。',
-        active: 'あなたは考えるよりもまず行動する、情熱的な挑戦者です。困難にも臆することなく飛び込み、その行動力で周囲を巻き込みながら道を切り拓いていきます。',
-        systematic: 'あなたは物事を論理的に、そして計画的に進めることを得意とします。複雑な状況でも冷静に分析し、最も効率的で確実な方法を見つけ出すことができる賢者です。',
-        harmonizer: 'あなたは周囲の意見を尊重し、チーム全体の調和を大切にします。コミュニケーション能力が高く、みんなが気持ちよく協力できる環境をつくり出す、縁の下の力持ちです。',
-        expressive: 'あなたは自分の感情や考えを言葉にして伝えることが得意です。感動的な物語や力強いメッセージで人々の心を動かし、新たな一歩を踏み出す勇気を与えます。',
-        balance: 'あなたは特定のタイプに偏らず、様々な強みをバランス良く兼ね備えています。状況に応じて柔軟に役割を変え、どんなチームや環境にも適応できる万能な才能を持っています。'
-    };
-
+    
     const startBtn = document.getElementById('start-btn');
     const startScreen = document.getElementById('start-screen');
     const quizScreen = document.getElementById('quiz-screen');
@@ -58,6 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Fade in the start button
     setTimeout(() => {
         startBtn.style.opacity = 1;
+        startBtn.style.visibility = 'visible';
         startBtn.style.transition = 'opacity 1s ease-in';
     }, 500);
 
