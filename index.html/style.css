@@ -169,8 +169,8 @@ body {
 }
 @media screen and (max-width: 480px) {
   .options label {
-    font-size: 0.85rem;
-    padding: 0.5rem 0.1rem;
+    font-size: 0.75rem;
+    padding: 0.4rem 0.8rem;
   }
 
   .btn,
