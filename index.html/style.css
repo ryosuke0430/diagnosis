@@ -59,6 +59,12 @@ body {
   width:60%;
   height:80px;
   pointer-events:auto;
+  font-size: 1.5rem;  /* 追加 or 調整 */
+  font-weight: bold;   /* 文字を太く */
+  letter-spacing: 1px; /* 文字間を少し広げる */
+  background: linear-gradient(135deg, #ffcc00, #ff9900);
+  color: #000;
+  text-shadow: none;
 }
 
 #quiz-screen {
@@ -167,4 +173,41 @@ body {
   #progress {
     font-size: 0.8rem;
   }
+}
+.result-text .result-description {
+  white-space: pre-wrap;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1rem;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-top: 1rem;
+}
+
+/* ── ボタンを横並びに ── */
+.result-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* ── 再診断／共有ボタン調整 ── */
+.retry-btn,
+.share-btn {
+  flex: 1;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid #fff;
+}
+
+/* ── 注意書き（備考） ── */
+#result small {
+  display: block;
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
+  color: #ccc;
 }
